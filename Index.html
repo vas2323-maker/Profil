@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>1sacrifice</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black url('https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUycDE1M2c5ZDhyaTcxMHI2YXBkemYwbmwzN2NrbGNrNmZpdXoydGRuMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qH1PNSJcvinDi/giphy.gif') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #8B0000; /* rouge foncé bordeaux */
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #8B0000; /* contour bordeaux */
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 5px 0 20px;
+    }
+
+    .links img {
+      width: 50px;
+      margin: 0 15px;
+      transition: transform 0.2s ease;
+    }
+
+    .links img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Image de profil -->
+  <img src="https://files.catbox.moe/5czt0m.jpeg" alt="Photo de profil" class="profile-pic">
+
+  <!-- Texte -->
+  <h1>1sacrifice</h1>
+  <p>soul eater masochist and poetry propaganda</p>
+
+  <!-- Liens Spotify -->
+  <div class="links">
+    <a href="https://open.spotify.com/user/31mcao5kfae7ompre3lqmfwcc2xe?si=sHUTs4_LT2e62P8BrhwKrA" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="Spotify">
+    </a>
+  </div>
+
+  <!-- Musique autoplay muet -->
+  <video id="bg-music" autoplay loop muted playsinline style="display:none;">
+    <source src="https://files.catbox.moe/fi3820.mov" type="video/mp4">
+  </video>
+
+  <script>
+    // Quand on clique une fois, la musique se dé-mute
+    document.addEventListener("click", function() {
+      let vid = document.getElementById("bg-music");
+      vid.muted = false;
+      vid.play();
+    }, { once: true });
+  </script>
+</body>
+</html>
